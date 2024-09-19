@@ -1,13 +1,3 @@
-<div class="card text-center my-3">
-    <div class="card-body">
-        <h5 class="card-title">Siga a famup no</h5>
-        <a href="https://news.google.com/u/2/publications/CAAqBwgKMNOysgsw4M3JAw?hl=pt-BR&gl=BR&ceid=BR%3Apt-419" target="_blank"><img src="<?php bloginfo('template_url');  ?>/assets/img/Google_News.png" alt="Google_News" /></a>
-    </div>
-
-</div>
-
-
-
 
 <?php if (is_single()) { ?>
     <?php
@@ -31,7 +21,7 @@
     $the_query = new WP_Query($args);
     if ($the_query->have_posts()) { ?>
         <h5 class="pb-2 mb-2 text-center text-primary">
-            Relacionados
+            Relacionadas
         </h5>
         <div class="card bg-white mb-5">
             <ul class="list-group list-group-flush">
@@ -46,7 +36,7 @@
                                 </span>
                                 <h6 class="">
                                     <?php echo title_limite(80); ?>
-    </h6>
+                                </h6>
                             </div>
                             <div class="flex-shrink-0  ms-3 ">
                                 <div class="image-box">
@@ -65,49 +55,6 @@
     <?php } else { ?>
         <p>Nenhuma Notícia relacionada a essa categoria no momento.</p>
     <?php } ?>
-<?php } ?>
-<?php if (is_home()) { ?>
-
-
-    <h5 class="pb-2 my-3 border-bottom text-center text-primary">
-        Você Sabia?
-    </h5>
-    <?php query_posts('post_type=post&category_name=voce-sabia&orderby=date&showposts=1'); ?>
-    <?php if (have_posts()) : ?>
-        <?php $cont = 0; ?>
-        <?php while (have_posts()) : the_post(); ?>
-            <?php if (get_field('slide') != null) : ?>
-                <div id="carouselExampleFade" class="carousel slide carousel-fade mb-5" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <?php foreach (get_field('slide') as $slide) { ?>
-                            <div class="carousel-item  <?php echo $cont == 0 ? 'active' : ''; ?>">
-                                <div class="card full-height text-white">
-                                    <?php if (get_field('video') != null) { ?>
-                                        <video autoplay muted loop>
-                                            <source src="<?php echo get_field('video'); ?>" type="video/mp4">
-                                        </video>
-                                    <?php } else { ?>
-                                        <img src="<?php echo $slide['imagem']; ?>" class="crop-image rounded" alt="...">
-                                    <?php }  ?>
-                                    <div class="black-overlay"></div>
-                                    <div class="card-img-overlay d-flex align-items-end justify-content-center p-4">
-                                        <a class="text-white text-center  stretched-link" href="<?php the_permalink(); ?>" title="<?php printf(__('%s', 'your-theme'), the_title_attribute('echo=0')); ?>">
-                                            <p> <span class="badge rounded-pill bg-transparent border p-2"> <?php echo get_categorias(array('parent_id' => 2, 'link' => null, 'separator' => ' - ', 'exclude' => array('noticias'), 'class' => null)); ?></span></p>
-                                            <h3 class="card-title text-center lh-sm"><?php echo $title = $mobile ? title_limite(100) : the_title(); ?></h3>
-                                            <p class="card-text fw-light lh-sm"><?php echo $excerpt = $mobile ? get_excerpt(100, false) : get_the_excerpt(); ?></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php $cont++; ?>
-                        <?php } ?>
-                    </div>
-                </div>
-            <?php endif; ?>
-        <?php endwhile; ?>
-    <?php endif; ?>
-    <?php wp_reset_postdata(); ?>
-
     <!-- mais lidos -->
     <?php
     $popular = new WP_Query(

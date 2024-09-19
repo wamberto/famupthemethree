@@ -11,6 +11,11 @@ $idpost = $post->post_parent;
                 <?php if (have_posts()) : ?>
                     <div class="post" id="post-<?php the_ID(); ?>" <?php post_class('post'); ?> data-id="Link post: <?php echo get_the_title(); ?>">
                         <?php while (have_posts()) : the_post(); ?>
+                            <h2 class=""><?php the_title(); ?></h2>
+                            <div class="d-flex justify-content-between text-secondary  border-top mb-0 pt-0">
+                                <p class="fw-light fs-6m-0"><small class="text-muted">Em <?php the_time('d/m/Y'); ?> </small></p>
+                            </div>
+
                         <?php if (has_post_thumbnail()) : ?>
                                 <div class="card border-0 mb-4">
                                     <?php the_post_thumbnail('img-bigest', array('class' => 'img-fluid rounded-4', 'alt' => get_caption_image())); ?>
@@ -29,13 +34,7 @@ $idpost = $post->post_parent;
                                     </div>
                                 </div>
                             <?php endif; ?>
-                           <p class="text-secondary mb-0">
-                                    <?php echo get_categorias(array('parent_id' => 2, 'link' => null, 'separator' => ' - ', 'exclude' => array('noticias'), 'class' => null)); ?>
-                            </p>
-                            <h2 class=""><?php the_title(); ?></h2>
-                            <div class="d-flex justify-content-between text-secondary  border-top border-bottom mb-3 pt-3">
-                                <p class="fw-light fs-6m-0"><small class="text-muted">Em <?php the_time('d/m/Y'); ?> </small></p>
-                            </div>
+                 
                           
                             <div class="the-content border-bottom mb-2">
                                 <?php the_content(); ?>

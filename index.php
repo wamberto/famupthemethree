@@ -6,7 +6,7 @@
                 <?php get_template_part('template-parts/carousel-noticias'); ?>
             </div>
             <div class="col-lg-12 col-xl-4 pt-1">
-                <?php $dataque_2 = new WP_Query(array('post_type' => 'post', 'orderby' => 'date', 'showposts' => '2', 'offset' => '1')); ?>
+                <?php $dataque_2 = new WP_Query(array('post_type' => 'post', 'orderby' => 'date', 'showposts' => '2', 'offset' => '3')); ?>
                 <?php if ($dataque_2->have_posts()) : while ($dataque_2->have_posts()) : $dataque_2->the_post(); ?>
                         <div class="col-12">
                             <div class="card post-medium bg-transparent border-0 text-white mb-2" style="height: 220px">
