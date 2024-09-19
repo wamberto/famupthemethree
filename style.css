@@ -1,0 +1,170 @@
+/*
+Theme Name: Famup Theme Three
+Theme URI: 
+Author: Betoferreira
+Text Domain: famupthemethree
+*/
+
+
+@import url("assets/css/bootstrap/bootstrap.css");
+@import url("assets/css/icones.css");
+   
+/* POST BIG */
+.post-big {position: relative;  width: 100%;  height: 73vh;  overflow:hidden;  margin: 0;}
+/* POST MEDIUM */
+.post-medium{position: relative;width: 100%;overflow:hidden;height: 36vh;}
+.post-medium .image-box .tag:last-child {position: absolute;margin: -45px 0 0 10px;}
+.post-small{  position: relative;  width: 100%;  height: auto;  overflow:hidden;}
+.post-small .image-box{margin-bottom: 10px;border-radius: 5px;height: 150px;}
+.post-small img{width: 100%;height: 200px;}
+.post-small .image-box .tag:last-child {position: absolute;margin: -28px 0 0 -1px;}
+.post-small h5{font-size: 1em;} 
+/* POST MINI */
+.post-mini{position: relative;width: 100%;height: auto;overflow:hidden;}
+.post-mini .image-box{background: #ffffff;overflow: hidden;margin-bottom: 10px;border-radius: 5px;height: 150px;}
+.post-mini img{width: 100%;height: 150px;}
+.post-mini .image-box .tag:last-child {position: absolute;margin: -28px 0 0 -1px;}
+.post-mini h5{font-size: 1em;} 
+.post-mini a{text-decoration: none;outline: none;}
+/* POST TINNY */
+.post-tinny{  position: relative;  width: 100%;  height: 100px;  overflow:hidden;}
+.post-tinny .image-box{overflow: hidden;margin-bottom: 10px;border-radius: 0px;height: 100px;}
+.post-tinny img{width: 100%;height: 100px;}
+.post-tinny .image-box .tag:last-child {position: absolute;margin: -28px 0 0 -1px;}
+.post-tinny h5{font-size: 1em;} 
+.post-tinny a{text-decoration: none;outline: none;}
+.object-fit_fill {object-fit: fill}
+.object-fit_contain {object-fit: contain}
+.object-fit_cover {object-fit: cover}
+.object-fit_none {object-fit: none}
+.object-fit_scale-down {object-fit: scale-down}
+
+a:link{
+  text-decoration: none;
+}
+
+.carousel-noticias {
+  height: 450px;
+
+}
+.carousel-noticias h1, .carousel-noticias h4, .carousel-noticias p, .carousel-noticias a{
+  color: #ccc;
+ height: inherit;
+}
+
+.carousel-noticias .fit-cover {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.black-overlay{
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+ /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,000000+100&0+0,0.84+100 */
+ background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(0,0,0,0.84) 100%); /* FF3.6-15 */
+ background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,0,0,0.84) 100%); /* Chrome10-25,Safari5.1-6 */
+ background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(0,0,0,0.84) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#d6000000',GradientType=0 ); /* IE6-9 */
+ 
+ }
+
+ /* Section - Parallax */
+/**************************/
+#page-sec .bg-header {
+  width: 100%;
+  height: 100%;
+  padding-top: 80px; 
+  padding-bottom: 80px; 
+}
+
+.post p{
+    font-size: 1.2rem;
+  }
+
+  /*
+  * ==========================================
+  * CUSTOM UTIL CLASSES
+  * ==========================================
+  */
+ 
+  .dropdown-menu .navbar-nav-scroll{
+    height: 400px;
+    margin-right: 20px;
+  }
+    
+  .dropdown-menu .navbar-nav-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+      
+  .custom-scrollbar-js,
+  .navbar-nav-scroll{
+    height: 600px;
+  }
+  /* Custom Scrollbar using CSS */
+  .navbar-nav-scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  /* scrollbar width */
+  .navbar-nav-scroll::-webkit-scrollbar {
+    width: 12px;
+  }
+  /* scrollbar track */
+  .navbar-nav-scroll::-webkit-scrollbar-track {
+    background: #eee;
+  }
+  /* scrollbar handle */
+ .navbar-nav-scroll::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: #c83c38;
+   }  
+
+   .custom-scrollbar {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    .custom-scrollbar{
+      height: 454px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+      border-radius: 1rem;
+      background: #ececec;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      border-radius: 1rem;
+      background-color: #b6b6b6;
+     }  
+
+   .crop-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    object-position: 50% 50%;
+    }
+  
+    
+    .crop-thumbnail {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      display: block;
+      overflow: auto;
+      object-position: 50% 50%;
+      }
+     
+  

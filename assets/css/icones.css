@@ -1,0 +1,126 @@
+.icons-header{
+   width: 100px;
+   height: 110px;
+   vertical-align: top;
+   margin-bottom: 20px;
+}
+.icons-header p{
+    font-size: 14px;
+    text-align: center;
+    color: #efefef;
+    text-decoration: none!important;
+}
+.icons-header a:link{
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none!important;
+}
+.icons-header .bi::before {
+    background-color: #efefef;
+    font-size: 2rem; 
+    padding: 16px;
+    border-radius: 100%;
+  }
+
+  .icons-header .fi::before {
+    background-color: #efefef;
+    font-size: 2rem; 
+    padding: 16px;
+    border-radius: 100%;
+    display: inline-block;
+  }
+
+
+  #redes-sociais .bi::before {
+    background-color: #efefef;
+    font-size: 2rem; 
+    padding: 16px;
+    border-radius: 100%;
+  }
+
+  #redes-sociais .icones a {
+    color: #999999!important;
+  }
+  #redes-sociais .icones.facebook a:hover {
+    color: blue!important;
+  }
+  #redes-sociais .icones.instagram a:hover {
+    color: purple!important;
+  }
+  #redes-sociais .icones.twitter a:hover {
+    color: #89d6fa!important;
+  }
+  #redes-sociais .icones.youtube a:hover {
+    color: #bf0000!important;
+  }
+
+  /* ------------------------------------------------
+ICONES MATERIAL DESIGN
+------------------------------------------------- */
+
+.icons-header .md {
+  background-color: #efefef;
+  font-size: 2.5rem; 
+  padding: 14px;
+  border-radius: 100%;
+}
+
+.material-symbols-outlined.md-18 {font-size: 18px;}
+.material-symbols-outlined.md-24 {font-size: 24px;}
+.material-symbols-outlined.md-36 {font-size: 36px;}
+.material-symbols-outlined.md-48 {font-size: 48px;}
+
+.material-symbols-outlined.red {color: red;}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.material-icons.red {
+  color: red;
+}
+/* bootstrap */
+/*
+.bi.bi-18 {font-size: 18px;}
+.bi.bi-24 {font-size: 24px;}
+.bi.bi-36 {font-size: 36px;}
+.bi.bi-48 {font-size: 48px;}
+
+.bi.bi-facebook{
+  color: blue!important;
+}
+.bi.bi-instagram{
+  color: purple!important;
+}
+.bi.bi-twitter{
+  color: #89d6fa!important;
+}
+.bi.bi-youtube{
+  color: #bf0000!important;
+}
+*/
+/*
+#redes-sociais .bi::before {
+  background-color: #efefef;
+  font-size: 2rem; 
+  padding: 16px;
+  border-radius: 100%;
+}
+
+#redes-sociais .icones a {
+  color: #999999!important;
+}
+#redes-sociais .icones.facebook a:hover {
+  color: blue!important;
+}
+#redes-sociais .icones.instagram a:hover {
+  color: purple!important;
+}
+#redes-sociais .icones.twitter a:hover {
+  color: #89d6fa!important;
+}
+#redes-sociais .icones.youtube a:hover {
+  color: #bf0000!important;
+}
+*/

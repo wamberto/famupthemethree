@@ -1,0 +1,10 @@
+/*
+* Comando sass
+* sass --watch style.scss style.css
+*/
+
+$red:                           #c83c38 !default;
+$primary:                       $red !default;
+
+
+@import "bootstrap/scss/bootstrap";	
