@@ -1,5 +1,5 @@
 <?php get_header(); ?>
- 
+ <div class="container">
     <div class="col-lg-12 mb-4">
             <form class="" role="search" method="get" action="<?php echo home_url('/'); ?>">
                 <div class="input-group">
@@ -9,7 +9,6 @@
                     <?php } ?>
                    <button class="btn btn-primary" type="submit" id="button-addon2">Buscar</button>
                 </div>
-          
             </form>
         </div>
         <?php if ($_GET['s'] != "") { ?>
@@ -62,7 +61,7 @@
                 </ul>
             <?php endif; ?>
         </div>
-
+</div>
 
 
 <?php get_footer(); ?>

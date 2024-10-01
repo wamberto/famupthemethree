@@ -2,38 +2,13 @@
     <div class="container text-center py-5">
         <p class="h3 text-primary mb-4">Parceiros</p>
 
-            <ul class="list-inline">
-                <li class="list-inline-item border">
-                    ...
-                </li>
-                <li class="list-inline-item border">
-                    ...
-                </li>
-                <li class="list-inline-item border">
-                    ...
-                </li>
-                <li class="list-inline-item border">
-                    ...
-                </li>
-                <li class="list-inline-item border">
-                    ...
-                </li>
-                <li class="list-inline-item border">
-                    ...
-                </li>
-                <li class="list-inline-item border">
-                    ...
-                </li>
-                <li class="list-inline-item border">
-                    ...
-                </li>
-                <li class="list-inline-item border">
-                    ...
-                </li>
-                <li class="list-inline-item border">
-                    ...
-                </li>
-            </ul>
+            <div class="list-inline">
+                
+                <a class="list-inline-item" href="https://www.cnm.org.br" target="_blank">
+                    <img src="<?php bloginfo('siteurl'); ?>/wp-content/uploads/imagens/parceiros/banner-cnm.jpg" class="img-fluid" />
+                </a>
+               
+            </div>
 
     </div>
 </section>

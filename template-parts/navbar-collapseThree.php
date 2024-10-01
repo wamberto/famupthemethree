@@ -24,9 +24,14 @@
                             <span class="h5">Área Técnica</span>
                         </a>
                     </li>
+                    <li class="">
+                        <a class="btn" href="https://sisgf.famup.org.br/usuario/login" target="_blank">
+                            <span class="h5">Área Restrita</span>
+                        </a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
-                    <li class="">
+                    <li class="nav-item">
                         <a class="btn" data-bs-toggle="collapse" href="#collapseNavbarSearch" role="button" aria-expanded="false" aria-controls="collapseExample">
                             <i class="bi bi-search"></i>
                         </a>
@@ -87,9 +92,6 @@
     </div>
 
     <!-- Colllapse 2-->
-    <div class="collapse" id="navbarTogglePrefeitura">
-        Prefeitura
-    </div>
     <div class="collapse" id="navbarToggleExternalContent">
         <div class="bg-white p-0">
             <div class="accordion accordion-flush mb-4" id="accordionFlushExample">
@@ -136,6 +138,14 @@
                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="accordion-item py-3 px-4">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                        <a href="https://sisgf.famup.org.br/usuario/login" target="_blank" class="text-secondary">
+                            <p class="fs-4 fw-bold m-0">Área Restrita</p>
+                        </a>
+                    </h2>
+                   
                 </div>
             </div>
             <form class="d-flex  p-4" role="search">
@@ -224,7 +234,7 @@
 </style>
 <script>
     $('#main_nav a').on('click', function() {
-        $('#main_nav .btn').addClass('active');
-        $('#main_nav .btn.collapsed').removeClass('active');
+        $('.nav-item .btn').addClass('active');
+        $('.nav-item .btn.collapsed').removeClass('active');
     })
 </script>

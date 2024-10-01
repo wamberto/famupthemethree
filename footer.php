@@ -32,8 +32,11 @@
                 <hr class="border border-secondary border-1 opacity-75">
                 
                 <h4 class=""><a href="<?php bloginfo('siteurl'); ?>/quem-somos" class="link-warning link-opacity-75-hover link-underline-opacity-0">Quem somos</a></h4>
-
                 <h4 class=""><a href="<?php bloginfo('siteurl'); ?>/diretoria" class="link-warning link-opacity-75-hover link-underline-opacity-0">Diretoria</a></h4>
+ 
+                <h4 class="text-white text-opacity-75 mt-4"></h4>
+                <h4 class=""><a href="https://www.famup.fastprivacy.com.br/" target="_blank" class="link-warning link-opacity-75-hover link-underline-opacity-0">Proteção de dados</a></h4>
+                <h4 class=""><a href="https://www.famup.fastprivacy.com.br/estatica/politica-de-privacidade.html" target="_blank" class="link-warning link-opacity-75-hover link-underline-opacity-0">Política de privacidade</a></h4>
 
             </div>
 
@@ -51,12 +54,20 @@
                 <h4 class="text-nowrap pb-2"><a href="https://www.cnj.jus.br/improbidade_adm/consultar_requerido.php?validar=form" target="_blank" class="link-warning link-opacity-75-hover link-underline-opacity-0">CNJ – Pedido</a></h4>
             </div>
             <div class="col-12 py-5">
-            <hr class="border border-secondary border-1 opacity-75"> 
-            <div class="container d-flex justify-content-around">
-                <h6 class="mb-0"><a href="https://sisgf.famup.org.br/" class="link-danger link-opacity-75-hover link-underline-opacity-0">SisGF</a></h6>
-                <h6 class="mb-0"><a href="https://www.diariomunicipal.com.br/famup/" class="link-danger link-opacity-75-hover link-underline-opacity-0">Diário Oficial dos Municípios</a></h6>
-                <h6 class="mb-0"><a href="https://famup.org.br/paraiba/" class="link-danger link-opacity-75-hover link-underline-opacity-0">Dados municipais</a></h6>
-            </div>
+                <hr class="border border-secondary border-1 opacity-75"> 
+                <div class="container">
+                    <ul class="list-inline d-flex justify-content-around">
+                        <li class="list-inline-item">
+                            <h6 class="m-2"><a href="https://sisgf.famup.org.br/" class="link-danger link-opacity-75-hover link-underline-opacity-0">SisGF</a></h6>
+                        </li>
+                        <li class="list-inline-item">
+                            <h6 class="m-2"><a href="https://www.diariomunicipal.com.br/famup/" class="link-danger link-opacity-75-hover link-underline-opacity-0">Diário Oficial dos Municípios</a></h6>
+                        </li>
+                        <li class="list-inline-item">
+                            <h6 class="m-2"><a href="https://famup.org.br/paraiba/" class="link-danger link-opacity-75-hover link-underline-opacity-0">Dados municipais</a></h6>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

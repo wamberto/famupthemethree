@@ -1,5 +1,5 @@
 <?php
-$arrEstimativa = file_get_contents("http://sisgf.famup.org.br/data_sharing/estimativa.php");
+$arrEstimativa = file_get_contents("https://sisgf.famup.org.br/data_sharing/estimativa.php");
 global $mes;
 $mes = json_decode($arrEstimativa);
 

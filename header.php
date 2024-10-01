@@ -8,6 +8,7 @@
   <meta name="author" content="Beto Ferreira">
   <meta name="generator" content="Beto Ferreira">
   <title>Famup</title>
+  <link href="<?php bloginfo('siteurl'); ?>/wp-content/uploads/imagens/favicon.ico" media='screen' rel='shortcut icon' />
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
 
@@ -16,6 +17,18 @@
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/fontawesome-free/css/all.css">
   <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/assets/bootstrap-icons/font/bootstrap-icons.css" />
   <script src="<?php bloginfo('template_url'); ?>/assets/js/jquery.min.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FKZJKFE8ML"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FKZJKFE8ML');
+</script>
+
+
 
  </head>
 <body class="d-flex flex-column h-100">

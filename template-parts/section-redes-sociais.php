@@ -8,9 +8,6 @@
                 <li class="list-inline-item icones instagram">
                 <a href="https://www.instagram.com/famupoficial/" target="_blank" class=""><i class="bi bi-instagram"></i></a>
                 </li>
-                <li class="list-inline-item icones twitter">
-                <a href="#" class=""><i class="bi bi-twitter"></i></a>
-                </li>
                 <li class="list-inline-item icones youtube">
                 <a href="https://www.youtube.com/@famuptv-municipalismoforte7637" target="_blank" class=""><i class="bi bi-youtube"></i></a>
                 </li>

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section class="container-fluid bg-body-secondary"  style="margin: -70px 0 0 0">
+<section class="container-fluid bg-body-secondary"  style="margin: -75px 0 0 0">
     <div class="container pt-5 pb-4">
         <div class="row">
             <div class="col-lg-12 col-xl-8 mb-4">
@@ -35,17 +35,17 @@
     <div class="container py-5">
         <div class="row">
             <div class="col-md-4  mb-2">
-                <a href="<?php bloginfo('url'); ?>" class="navbar-brand">
+                <a href="https://www.diariomunicipal.com.br/famup/" target="_blank" class="navbar-brand">
                     <img src="<?php bloginfo('siteurl'); ?>/wp-content/uploads/imagens/banner-dom.jpg" class="img-fluid rounded-3" />
                 </a>
             </div>
             <div class="col-md-4 mb-2">
-                <a href="<?php bloginfo('url'); ?>" class="navbar-brand">
+                <a href="https://www.diariomunicipal.com.br/famup/" target="_blank" class="navbar-brand">
                     <img src="<?php bloginfo('siteurl'); ?>/wp-content/uploads/imagens/banner-dom.jpg" class="img-fluid rounded-3" />
                 </a>
             </div>
             <div class="col-md-4 mb-2">
-                <a href="<?php bloginfo('url'); ?>" class="navbar-brand">
+                <a href="https://www.diariomunicipal.com.br/famup/" target="_blank" class="navbar-brand">
                     <img src="<?php bloginfo('siteurl'); ?>/wp-content/uploads/imagens/banner-dom.jpg" class="img-fluid rounded-3" />
                 </a>
             </div>
@@ -75,7 +75,14 @@
                     <?php $mes = isset($_POST['mes']) ? $_POST['mes'] : date('m'); ?>
                         <?php foreach (aniversario($aniversario_prefeito, $mes) as $niver) { ?>
                             <?php $mes = isset($_POST['mes']) ? $_POST['mes'] : $niver['mes']; ?>
-                            <div class="d-flex align-items-center">
+                            
+                            <?php $dia_mes = $niver['dia'].'-'.$niver['mes']; ?>
+                            <?php if($dia_mes === date('j-n')) { ?>
+                            <?php $cor_destaque_niver = 'bg-destaque'; ?>
+                            <?php } ?>
+                            
+                            <div class="d-flex align-items-center"  style="position: relative;">
+                                <div class="rounded-4 <?php echo $cor_destaque_niver; ?>"></div>
                                 <div class="flex-shrink-0">
                                     <?php if ($niver['foto'] !== "") { ?>
                                         <figure class="figure my-2" style="height: 96px; width: 96px">
@@ -83,7 +90,7 @@
                                         </figure>
                                     <?php  } else { ?>
                                         <figure class="figure my-2" style="height: 96px; width: 96px">
-                                            <img src="<?php echo $sisgf . '/user-circle.png'; ?>" class="crop-thumbnail img-thumbnail img-fluid rounded-circle" />
+                                            <img src="<?php echo $sisgf . '/img_default_150x200.png'; ?>" class="crop-thumbnail img-thumbnail img-fluid rounded-circle" />
                                         </figure>
                                     <?php } ?>
                                 </div>
@@ -101,29 +108,35 @@
                 </div>
                 <div class="col-sm-12 col-lg-6">
                     <h3 class="text-muted text-center mb-3">Cidades Aniversariantes</h3>
-                    <div class="custom-scrollbar">
+                    <div class="custom-scrollbar px-1">
                          <?php foreach (emancipacao($aniversario_cidade, $mes) as $cidade) { ?>
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0">
+                            <?php $dia_mes = $cidade['dia'].'-'.$cidade['mes']; ?>
+                            <?php if($dia_mes === date('j-n')) { ?>
+                            <?php $cor_destaque_cidade = 'bg-destaque'; ?>
+                            <?php } ?>
+                            <div class="d-flex align-items-center bg-transparent" style="position: relative;">
+                                <div class="rounded-4 <?php echo $cor_destaque_cidade; ?>"></div>
+                                <div class="flex-shrink-0 ms-3">
                                     <?php if ($cidade['foto'] !== "") { ?>
                                         <figure class="figure my-2" style="height: 96px; width: 96px">
                                             <img src="<?php echo $sisgf . '/' . $cidade['foto']; ?>" class="crop-thumbnail img-thumbnail img-fluid rounded-circle" />
                                         </figure>
                                     <?php  } else { ?>
                                         <figure class="figure my-2" style="height: 96px; width: 96px">
-                                            <img src="<?php echo $sisgf . '/user-circle.png'; ?>" class="crop-thumbnail img-thumbnail img-fluid rounded-circle" />
+                                            <img src="<?php echo $sisgf . '/img_default_150x200.png'; ?>" class="crop-thumbnail img-thumbnail img-fluid rounded-circle" />
                                         </figure>
                                     <?php } ?>
                                 </div>
                                 <div class="flex-grow-1 ms-3">
                                     <h6 class="mb-2"><?php echo $cidade['nome'] ?></h6>
                                     <small class="text-body-secondary">
-                                        <i class="fa-solid fa-cake-candles"></i> <?php echo $cidade['dia'] . '/' . $cidade['mes']; ?>
+                                        <i class="fa-solid fa-cake-candles"></i> <?php echo $cidade['dia'] . '/' . $cidade['mes'] . ' - '. $cidade['emancipacao'] ; ?>
                                         -
                                         <i class="fas fa-praying-hands"></i> <?php echo $cidade['padroeira']; ?>
                                     </small>
                                 </div>
                             </div>
+                            <?php $cor_destaque_cidade = ''; ?>
                         <?php } ?>
                     </div>
                 </div>
@@ -155,7 +168,7 @@
                             <option value="<?php echo $k; ?>" <?php echo $selected; ?>><?php echo $value; ?></option>
                         <?php } ?>
                     </select>
-                <input  type="submit" form="form1" class="btn btn-outline-success" value="Enviar"/>
+                <input  type="submit" form="form1" class="btn btn-outline-danger" value="Enviar"/>
                 </form>
                 </div>
             </div>
@@ -163,5 +176,37 @@
             <div class="box_cidades"></div>
         </div>
     </section>
+
+<style>
+
+.confete{
+    background-image: url('<?php bloginfo('siteurl'); ?>/wp-content/uploads/imagens/confetes-2.gif');
+}
+
+.bg-destaque {
+    position: absolute;
+    background-color: #ffe69c;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+    animation-iteration-count: infinite;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    z-index: -1;
+}
+@keyframes myAnim {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.2;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+</style>
 
     <?php get_footer(); ?>
